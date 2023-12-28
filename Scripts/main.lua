@@ -2,7 +2,7 @@ local UEHelpers = require("UEHelpers")
 
 -- LUA SETTINGS #START
 toggleKeyBind = Key.F7 -- The key that's pressed to toggle your hud!
-battleHudOpacity = 0 -- Edits the opacity of the hud.
+battleHudOpacity = 0.9 -- Edits the opacity of the hud.
 
 -- LUA SETTINGS #END
 
@@ -25,7 +25,7 @@ function AdjustHud()
 end
 
 RegisterHook("/Script/Engine.PlayerController:ClientRestart", function(Context, NewPawn)
-    ExecuteWithDelay(2000, function()
+    ExecuteWithDelay(5000, function()
         AdjustHud()
     end)
 end)
